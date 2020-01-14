@@ -5,6 +5,8 @@ let search_filter = [];
 let ul =  document.querySelector('ul');
 let add_book = document.querySelector('#book-add');
 
+
+
 function search_book(event){
     let searchBook = event.target.value + event.key;
     search_filter = state.filter(cv =>{
@@ -32,7 +34,7 @@ function hide_books(event){
 
 
 function add_book_collection(event){
-    // event.preventDefault();
+    console.log(event);
     if(event.code == 'Enter'){
         console.log(event.target.value);
 
@@ -47,7 +49,6 @@ function add_book_collection(event){
     }
 }
 function delete_book(event){
-    // console.dir(event.target.dataset.id);
     state = state.filter((cv,i )=> !(event.target.dataset.id == i));
     localStorage.clear();
     localStorage.setItem("state" , JSON.stringify(state));
@@ -80,6 +81,8 @@ function view(array){
 document.querySelector('#search-books').addEventListener('keydown' , search_book)
 document.querySelector('input[type= checkbox]').addEventListener('click' , hide_books);
 add_book.addEventListener('keydown' ,add_book_collection)
+
+
 document.querySelector('#add-book').addEventListener('click' , (event)=>{
     event.preventDefault();
 })

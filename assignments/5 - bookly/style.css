@@ -5,7 +5,7 @@ body{
 }
 
 h1, h2{
-    font-weight: normal;
+    font-weight: normal ;
 }
 
 #wrapper{
@@ -99,7 +99,7 @@ h1, h2{
     background: #e91e63;
     padding: 10px 20px;
     font-size: 16px;
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
@@ -142,4 +142,29 @@ h1, h2{
 
 #tabbed-content .panel.active{
     display: block;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.del_btn{
+    width: 100px;
+    height: 38px;
+    margin: 16px 14px;
+    font-size: 14px;
+    background-color: rgb(234,75,99);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+li{
+    font-size: 17px;
+    text-transform: capitalize;
 }
